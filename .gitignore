@@ -1,1 +1,5 @@
 node_modules
+deploy
+.firebaseerc
+firebase.json
+*.firebaserc

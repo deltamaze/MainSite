@@ -1,0 +1,12 @@
+.dropdown-menu li>span {
+  display: block;
+  padding: 1px 10px;
+  clear: both;
+}
+.table tbody tr:hover td,
+.table tbody tr:hover th {
+  background-color: transparent;
+}
+.table-hover>tbody>tr:hover {
+    background-color: transparent;
+}

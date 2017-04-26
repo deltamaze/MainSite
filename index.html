@@ -13,15 +13,27 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--Use Less Css-->
+    <link href="css/freelancer.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/freelancer.min.css" rel="stylesheet">
+    <!--<link href="css/freelancer.min.css" rel="stylesheet">-->
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+
+
+  <!-- Bootstrap Table CSS -->
+  <link rel="stylesheet" href="css/bootstrap-table.min.css">
+  
+ 
+  <!-- Bootstrap Table Filter Extension CSS -->
+  <link rel="stylesheet" href="css/bootstrap-table-extra.css">
+  
+  
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -52,7 +64,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Projects</a>
+                        <a href="#webApps">WebApps</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#projects">Projects</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#about">About</a>
@@ -75,23 +90,27 @@
                     <img class="img-responsive" src="img/profile.png" alt="">
                     <div class="intro-text">
                         <h1 class="name">Kilomaze</h1>
-                        <hr class="star-light">
-                        <span class="skills">by Will Pooley</span>
+                        <br/>
+                        <span class="skills">Web Apps by Will Pooley</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <!--Web App section-->
 
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
+    <!-- Projects Grid Section -->
+    <section id="webApps">
         <div class="container">
+            
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Projects</h2>
-                    <hr class="star-primary">
+                    <h2>WebApps</h2>
+                    <br/>
                 </div>
             </div>
+            <div><p>Coming Soon</p></div>
+            <!--
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
@@ -124,48 +143,68 @@
                     </a>
                 </div>
             </div>
+            -->
         </div>
     </section>
-
-    <!-- About Section -->
-    <section class="success" id="about">
-        <div class="container">
+    <!--Projects-->
+    <section class="success" id="projects">
+         <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Projects</h2>
+                    <br/>
+                </div>
+            </div>
+                <div class="col-lg-12 text-center">
+                    <div id="filter-bar"></div>
+                    <table id="tbl" data-toggle="table" data-url="projects.json" data-toolbar="#filter-bar" data-show-toggle="false" data-show-filter="true" data-search="true" data-pagination="true">
+                        <thead>
+                        <tr>
+                            <th data-field="Date" data-align="left" data-sortable="true">Name</th>
+                            <th data-field="Name" data-align="left" data-sortable="true">Name</th>
+                            <th data-field="Type" data-align="left" data-sortable="true">Type</th>
+                            <th data-field="URL" data-align="left" data-sortable="true">URL</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">  
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>About</h2>
-                    <hr class="star-light">
+                    <br/>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>This website is a tool to catalog my various projects, check them out!</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>If you would like to learn more about me, please visit my LinkedIn page!</p>
-                </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#" class="btn btn-lg btn-outline">
-                        Linked<i class="fa fa-linkedin-square"></i> 
-                    </a>
+                    <p>This website is a repository of all my techology, and hobby projects. </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section class="success" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Contact Me</h2>
-                    <hr class="star-primary">
+                    <br/>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    Contact me via email at admin@Kilomaze.com
+                    <p>Contact me via email at Admin@kilomaze.com</p>
+                    <br/>
+                    <p>If you would like to learn more about me, please visit my LinkedIn page!</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="#" class="btn btn-lg btn-outline">
+                        Linked<i class="fa fa-linkedin-square"></i> 
+                    </a>
                 </div>
             </div>
         </div>
@@ -303,6 +342,9 @@
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
+     <!-- Bootstrap Table JavaScript -->
+    <script src="https://rawgit.com/wenzhixin/bootstrap-table/master/src/bootstrap-table.js"></script>
+  
     <!--Back back button take user out of modal-->
     <script type="text/javascript">
         $('#portfolioModal1').on('show.bs.modal', function(e) {

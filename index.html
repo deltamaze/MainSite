@@ -109,19 +109,19 @@
                     <br/>
                 </div>
             </div>
-            <div><p>Coming Soon</p></div>
-            <!--
+            
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
-                                Technology
+                                Snake Arcade
                             </div>
                         </div>
-                        <img src="img/portfolio/cabin.png" class="img-responsive" alt="Cabin">
+                        <img src="img/portfolio/SnakeArcadeCrop.png" class="img-responsive" alt="SnakeArcade">
                     </a>
                 </div>
+                <!--
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -197,12 +197,12 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p>Contact me via email at Admin@kilomaze.com</p>
+                    <p>Contact me via email at <a href="mailto:admin@kilomaze.com">admin@kilomaze.com</a></p>
                     <br/>
                     <p>If you would like to learn more about me, please visit my LinkedIn page!</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#" class="btn btn-lg btn-outline">
+                    <a href="https://www.linkedin.com/in/william-pooley-1562a080/"  class="btn btn-lg btn-outline">
                         Linked<i class="fa fa-linkedin-square"></i> 
                     </a>
                 </div>
@@ -219,7 +219,10 @@
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
+                                <a href="http://stackoverflow.com/users/3562204/will" class="btn-social btn-outline"><span class="sr-only">Stack Overflow</span><i class="fa fa-fw fa-stack-overflow"></i></a>
                                 <a href="https://www.linkedin.com/in/william-pooley-1562a080/" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
+                                <a href="https://github.com/deltamaze/" class="btn-social btn-outline"><span class="sr-only">Github</span><i class="fa fa-fw fa-github"></i></a>
+                                <a href="https://medium.com/@deltamaze" class="btn-social btn-outline"><span class="sr-only">Medium</span><i class="fa fa-fw fa-medium"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -236,7 +239,7 @@
     </div>
 
     <!-- Project Modals -->
-    <!--Technology-->
+    <!--Snake Arcade-->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -249,16 +252,20 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Technology</h2>
+                            <h2>Snake Arcade</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Below are links to my technology related projects</p>
-                            <ul class="list-inline item-details">
-                                <li><p>Firebase Tutorial 3/10/2017 - 
-                                    <strong><a href="http://youtube.com">Youtube : coming soon</a>
-                                    </strong>
-                                </p></li>
-                            </ul>
+                            <a href='https://snakearcade-45688.firebaseapp.com/'><img src="img/portfolio/SnakeArcade.png" class="img-responsive img-centered" alt=""></a>
+                            <h3>2 player online Snake game</h3>
+                            <p>Live Demo - <a href='https://snakearcade-45688.firebaseapp.com/'>https://snakearcade-45688.firebaseapp.com/</a></p>
+                            <p>Github - <a href='https://github.com/deltamaze/SnakeArcade'>https://github.com/deltamaze/SnakeArcade</a></p>
+                            <div class='left'>Node server runs the game, and posts the snake positions into a readable firebase structure. Clients are able to send input to firebase, which the node server listens on. The client also listens and draws the snake positions onto a p5.js canvas.
+                                </br></br>
+                                Snake game logic was mostly derived from "The Coding Train":<a href='https://youtu.be/AaGK-fj-BAM'>https://youtu.be/AaGK-fj-BAM</a> and just converted into a client/server format, and extended to allow 2 players.
+                                </br></br>
+                                This was more of a proof of concept to see Firebases and Firebase Function abilities and limitations. Firebase functions proved to not work very well for hosting the server side code. The onWrite database trigger would go into sleep mode and it would take 30+ seconds from the client asking to start the game, for the server to actually do it. Also, there were other performance issues, which caused me to host the server side as a node.js service instead.
+                                </br></br>
+                                Firebase itself also probably wasn't optimal for this specific application, as it seems to have 300ms lag spikes from time to times. For this snake game, a 300ms lag spike could cause a snake to crash into the wall. I don't think firebase was intended to be used for this scenario, as this probably should have been a socket.io/signalR project. For most other use cases it should not be an issue, and I still highly recommend firebase as a "Backend as a Service" solution.</div>
+                                
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-arrow-left"></i> Back</button>
                         </div>
                     </div>

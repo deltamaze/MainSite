@@ -502,3 +502,6 @@ fieldset[disabled] .btn-success.active {
 div#maincontent {
   outline: none;
 }
+.left{
+  text-align: left;
+}

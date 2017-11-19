@@ -435,16 +435,17 @@
     var db = firebase.firestore()
 
     var colRef = db.collection("Projects");
-
-    colRef.get().then(function (ref) {
-      if (ref.exists) {
-        console.log("Collection data:", ref.data());
-      } else {
-        console.log("No such Collection!");
-      }
-    }).catch(function (error) {
-      console.log("Error getting Collection:", error);
+    colRef.doc("SF").set({
+      name: "San Francisco", state: "CA", country: "USA",
+      capital: false, population: 860000
     });
+
+    db.collection("Projects").get().then(function (querySnapshot) {
+      querySnapshot.forEach(function (doc) {
+        console.log(doc.id, " => ", doc.data());
+      });
+    });
+
   </script>
 
 </body>

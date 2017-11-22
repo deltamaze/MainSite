@@ -160,21 +160,7 @@
       </div>
       <div class="col-lg-12 text-center">
         <div id="filter-bar"></div>
-        <table id="tbl" data-toggle="table" data-url="projects.json" data-toolbar="#filter-bar" data-show-toggle="false" data-show-filter="true"
-          data-search="true" data-pagination="true">
-          <thead>
-            <tr>
-              <th data-field="Date" data-align="left" data-sortable="true">Date</th>
-              <th data-field="Name" data-align="left" data-sortable="true">Name</th>
-              <th data-field="Type" data-align="left" data-sortable="true">Type</th>
-              <th data-field="URL" data-align="left" data-sortable="true">URL</th>
-            </tr>
-          </thead>
-        </table>
-      </div>
-      <div class="col-lg-12 text-center">
-        <div id="filter-bar"></div>
-        <table id="tbl2" data-toggle="table" data-toolbar="#filter-bar" data-show-toggle="false" data-show-filter="true" data-search="true"
+        <table id="tbl" data-toggle="table" data-toolbar="#filter-bar" data-show-toggle="false" data-show-filter="true" data-search="true"
           data-pagination="true">
           <thead>
             <tr>
@@ -184,8 +170,6 @@
               <th data-field="URL" data-align="left" data-sortable="true">URL</th>
             </tr>
           </thead>
-          <tbody id="tbl2Body">
-          </tbody>
         </table>
       </div>
     </div>
@@ -289,9 +273,9 @@
             <div class="modal-body">
               <h2>Snake Arcade</h2>
               <hr class="star-primary">
-              <a href='https://snakearcade-45688.firebaseapp.com/'>
+              <!-- <a href='https://snakearcade-45688.firebaseapp.com/'>
                 <img src="img/portfolio/SnakeArcade.png" class="img-responsive img-centered" alt="">
-              </a>
+              </a> -->
               <h3>2 player online Snake game</h3>
               <p>Live Demo -
                 <a href='https://snakearcade-45688.firebaseapp.com/'>https://snakearcade-45688.firebaseapp.com/</a>
@@ -462,16 +446,9 @@
     firebase.initializeApp(config);
     var db = firebase.firestore()
 
-    var colRef = db.collection("Projects");
     let tableData = []
     let loopIndex = 0;
-    let $table = $('#tbl2');
-    // $('#tbl2').bootstrapTable({
-    //   data: [{
 
-    //     Name: 'Loading...'
-    //   }]
-    // });
     db.collection("Projects").get().then(function (querySnapshot) {
       querySnapshot.forEach(function (doc) {
 
@@ -482,58 +459,18 @@
         let yyyy = date.getFullYear();
         let formattedDate = mm+'/'+dd+'/'+yyyy;
         tableData[loopIndex] = {
-
           Date: formattedDate,
           Name: doc.data().Name,
           Type: doc.data().Type,
           URL: doc.data().URL
         }
         loopIndex++;
-      }.bind(this))
+      })
 
-      $('#tbl2').bootstrapTable('load', tableData);
-      //LoadTable();
-
+      $('#tbl').bootstrapTable('load', tableData);
 
 
     });
-
-
-
-    // .then(
-    //     $('#tbl2').bootstrapTable({
-    //     columns: [{
-    //       field: 'Date',
-    //       title: 'Date'
-    //     }, {
-    //       field: 'Name',
-    //       title: 'Name'
-    //     }, {
-    //       field: 'Type',
-    //       title: 'Type'
-    //     }, {
-    //       field: 'URL',
-    //       title: 'URL'
-    //     }]
-    //     ,
-    //     data: tableData
-    //   })
-    //   );
-
-    // setTimeout(function() {
-    //     console.log('first 10 secs');
-    //     LoadTable();
-
-
-    // }, 1000);
-    function LoadTable() {
-      console.log("start");
-      $('#tbl2').bootstrapTable('load', [{
-
-        Name: 'Loading4...'
-      }]);
-    }
-
 
 
   </script>

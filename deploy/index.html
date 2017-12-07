@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Kilomaze</title>
+  <title>Wpooley</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -57,7 +57,7 @@
           <span class="sr-only">Toggle navigation</span> Menu
           <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand" href="#page-top">Kilomaze</a>
+        <a class="navbar-brand" href="#page-top">Wpooley</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -92,8 +92,8 @@
         <div class="col-lg-12">
           <img class="img-responsive" src="img/profile.png" alt="">
           <div class="intro-text">
-            <h1 class="name">Kilomaze</h1>
-            <br/>
+            <!-- <h1 class="name">Kilomaze</h1>
+            <br/> -->
             <span class="skills">Web Apps by Will Pooley</span>
           </div>
         </div>
@@ -184,7 +184,10 @@
       </div>
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center">
-          <p>This website is a repository of all my techology, and hobby projects. </p>
+          <p>Hey, my name is Will! I’m trying to make myself more productive outside work, so I created this site to motivate myself! 
+            The goal is to create, or do a side project, at least once a month. While my side projects are heavily code oriented, 
+            I try to dabble in other things like photography/fitness/travel! I hope to have a more diverse set of projects listed, in 2018! 
+            I fell off mid 2017, but now I'm back on track! </p>
         </div>
       </div>
     </div>
@@ -202,7 +205,7 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center">
           <p>Contact me via email at
-            <a href="mailto:admin@kilomaze.com">admin@kilomaze.com</a>
+            <a href="mailto:admin@wpooley.com">admin@wpooley.com</a>
           </p>
           <br/>
           <p>If you would like to learn more about me, please visit my LinkedIn page!</p>
@@ -436,12 +439,12 @@
   <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
   <script>
     var config = {
-      apiKey: "AIzaSyARMk8y14wR-OPnYAlrEMNvLG4iFv1rfHo",
-      authDomain: "kilomaze-ed633.firebaseapp.com",
-      databaseURL: "https://kilomaze-ed633.firebaseio.com",
-      projectId: "kilomaze-ed633",
-      storageBucket: "kilomaze-ed633.appspot.com",
-      messagingSenderId: "749889283215"
+      apiKey: "AIzaSyBPk-QypKVKaPy7MkKkxKdCVkbgKQcPYWY",
+      authDomain: "wpooley-49105.firebaseapp.com",
+      databaseURL: "https://wpooley-49105.firebaseio.com",
+      projectId: "wpooley-49105",
+      storageBucket: "wpooley-49105.appspot.com",
+      messagingSenderId: "344411469950"
     };
     firebase.initializeApp(config);
     var db = firebase.firestore()
@@ -449,7 +452,7 @@
     let tableData = []
     let loopIndex = 0;
 
-    db.collection("Projects").get().then(function (querySnapshot) {
+    db.collection("Projects").orderBy("Date", "desc").get().then(function (querySnapshot) {
       querySnapshot.forEach(function (doc) {
 
         // parse date,
@@ -457,7 +460,7 @@
         let dd = date.getDate();
         let mm = date.getMonth() + 1; //January is 0!
         let yyyy = date.getFullYear();
-        let formattedDate = mm+'/'+dd+'/'+yyyy;
+        let formattedDate = mm + '/' + dd + '/' + yyyy;
         tableData[loopIndex] = {
           Date: formattedDate,
           Name: doc.data().Name,

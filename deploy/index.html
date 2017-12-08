@@ -115,6 +115,16 @@
 
       <div class="row">
         <div class="col-sm-4 portfolio-item">
+          <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+            <div class="caption">
+              <div class="caption-content">
+                Story Game
+              </div>
+            </div>
+            <img src="img/portfolio/StoryGameCrop.png" class="img-responsive" alt="StoryGame">
+          </a>
+        </div>
+        <div class="col-sm-4 portfolio-item">
           <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
             <div class="caption">
               <div class="caption-content">
@@ -317,7 +327,7 @@
       </div>
     </div>
   </div>
-  <!--Photography-->
+  <!--StoryGame-->
   <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content">
       <div class="close-modal" data-dismiss="modal">
@@ -330,19 +340,31 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <div class="modal-body">
-              <h2>Photography</h2>
+              <h2>StoryGame</h2>
               <hr class="star-primary">
-              <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-              <p>Below are links to my Photography related projects</p>
-              <ul class="list-inline item-details">
-                <li>
-                  <p>Firebase Tutorial 3/10/2017 -
-                    <strong>
-                      <a href="http://youtube.com">Youtube : coming soon</a>
-                    </strong>
-                  </p>
-                </li>
-              </ul>
+              <h3>3+ player online Story Collab game</h3>
+              <p>Live App -
+                <a href='storygame.kilomaze.com'>storygame.kilomaze.com</a>
+              </p>
+              <p>Github -
+                <a href='https://github.com/deltamaze/StoryGame'>https://github.com/deltamaze/StoryGame</a>
+              </p>
+              <div class='left'>A game that is intended  for 3 or more player. One player creates the game as the host, and other players can join the game.
+                There will be default of 7 Rounds in a game, with 2 turns per round. In the first turn, players will suggest a sentence  to an ongoing story. 
+                In the second turn, players will vote on someone else’s idea. The idea with the most votes gets added to the story, and the player who
+                proposed the idea is awarded a point. When a tie occurs, the winner is selected randomly. 
+                This will continue until all rounds are complete, and the player with the most votes will be deemed the winner. 
+                In addition, all players will be able to enjoy a collaboratively built story!
+                </br>
+                </br>
+                Specs: Front end is hosted by Firebase, and was built  using Angular, Firebase, Bootstrap + other technologies.
+                </br>
+                The backend was built with nodejs, and is used to run a game engine. The engine determines round winners, removed inactive players, and progresses the round when all active players, finish inputting their ideas.
+                </br>
+                </br>
+                This is a work in progress, and additional features are still being worked on (social media integration, one click quickplay button, availability on app store, account page, etc...)
+              </div>
+
               <button type="button" class="btn btn-default" data-dismiss="modal">
                 <i class="fa fa-arrow-left"></i> Back</button>
             </div>

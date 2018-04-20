@@ -125,6 +125,16 @@
           </a>
         </div>
         <div class="col-sm-4 portfolio-item">
+            <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+                  Online Multiplayer Slime VBall
+                </div>
+              </div>
+              <img src="img/portfolio/SlimeCrop.png" class="img-responsive" alt="Slime Volleyball">
+            </a>
+          </div>
+        <div class="col-sm-4 portfolio-item">
           <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
             <div class="caption">
               <div class="caption-content">
@@ -194,10 +204,10 @@
       </div>
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center">
-          <p>Hey, my name is Will! I’m trying to make myself more productive outside work, so I created this site to motivate myself! 
-            The goal is to create, or do a side project, at least once a month. While my side projects are heavily code oriented, 
-            I try to dabble in other things like photography/fitness/travel! I hope to have a more diverse set of projects listed, in 2018! 
-            I fell off mid 2017, but now I'm back on track! </p>
+          <p>Hey, my name is Will! I’m trying to make myself more productive outside work, so I created this site to motivate
+            myself! The goal is to create, or do a side project, at least once a month. While my side projects are heavily
+            code oriented, I try to dabble in other things like photography/fitness/travel! I hope to have a more diverse
+            set of projects listed, in 2018! I fell off mid 2017, but now I'm back on track! </p>
         </div>
       </div>
     </div>
@@ -349,20 +359,23 @@
               <p>Github -
                 <a href='https://github.com/deltamaze/StoryGame'>https://github.com/deltamaze/StoryGame</a>
               </p>
-              <div class='left'>A game that is intended  for 3 or more player. One player creates the game as the host, and other players can join the game.
-                There will be default of 7 Rounds in a game, with 2 turns per round. In the first turn, players will suggest a sentence  to an ongoing story. 
-                In the second turn, players will vote on someone else’s idea. The idea with the most votes gets added to the story, and the player who
-                proposed the idea is awarded a point. When a tie occurs, the winner is selected randomly. 
-                This will continue until all rounds are complete, and the player with the most votes will be deemed the winner. 
-                In addition, all players will be able to enjoy a collaboratively built story!
+              <div class='left'>A game that is intended for 3 or more player. One player creates the game as the host, and other players can
+                join the game. There will be default of 7 Rounds in a game, with 2 turns per round. In the first turn, players
+                will suggest a sentence to an ongoing story. In the second turn, players will vote on someone else’s idea.
+                The idea with the most votes gets added to the story, and the player who proposed the idea is awarded a point.
+                When a tie occurs, the winner is selected randomly. This will continue until all rounds are complete, and
+                the player with the most votes will be deemed the winner. In addition, all players will be able to enjoy
+                a collaboratively built story!
                 </br>
                 </br>
-                Specs: Front end is hosted by Firebase, and was built  using Angular, Firebase, Bootstrap + other technologies.
+                Specs: Front end is hosted by Firebase, and was built using Angular, Firebase, Bootstrap + other technologies.
                 </br>
-                The backend was built with nodejs, and is used to run a game engine. The engine determines round winners, removed inactive players, and progresses the round when all active players, finish inputting their ideas.
+                The backend was built with nodejs, and is used to run a game engine. The engine determines round winners, removed inactive
+                players, and progresses the round when all active players, finish inputting their ideas.
                 </br>
                 </br>
-                This is a work in progress, and additional features are still being worked on (social media integration, one click quickplay button, availability on app store, account page, etc...)
+                This is a work in progress, and additional features are still being worked on (social media integration, one click quickplay
+                button, availability on app store, account page, etc...)
               </div>
 
               <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -373,7 +386,7 @@
       </div>
     </div>
   </div>
-  <!--Fitness-->
+  <!--Slime-->
   <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content">
       <div class="close-modal" data-dismiss="modal">
@@ -386,19 +399,32 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <div class="modal-body">
-              <h2>Project Title</h2>
+              <h2>Online Multiplayer Slime VBall</h2>
               <hr class="star-primary">
-              <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-              <p>Below are links to my Fitness related projects</p>
-              <ul class="list-inline item-details">
-                <li>
-                  <p>Firebase Tutorial 3/10/2017 -
-                    <strong>
-                      <a href="http://youtube.com">Youtube : coming soon</a>
-                    </strong>
-                  </p>
-                </li>
-              </ul>
+              <h3>2+ player online Slike Volleyball game</h3>
+              <p>Live App -
+                <a href='https://wpooley.com/Slime/online-multiplayer/client'>https://wpooley.com/Slime/online-multiplayer/client</a>
+              </p>
+              <p>Github -
+                <a href='https://github.com/deltamaze/Slime/'>https://github.com/deltamaze/Slime/</a>
+              </p>
+              <div class='left'>The Slime Volleyball game is not an original concept. I remember playing a Flash based, game more than 10 years
+                ago. However, I have not been able to find someone who was created an online multiplayer version (all I have
+                seen has been local multiplayer, or vs AI).
+                </br>
+                So, I took it upon myself to re-create the game with online features.
+                </br>
+                App is still a work in progress, to clean up the UI and make some elements more intuitive.
+                </br>
+                </br>
+                Specs: Front end was built using Javascript, P5 to draw the shapes to a canvas, MatterJs for Physics, and communicates to a server using the socket.io client library.
+                </br>
+                The backend was built with nodejs, and is used to run socket.io on the backend. Socket IO uses web sockets to execute client side javascript with low latency.
+                </br>
+                </br>
+                This is a work in progress, and additional features are still being worked on.
+              </div>
+
               <button type="button" class="btn btn-default" data-dismiss="modal">
                 <i class="fa fa-arrow-left"></i> Back</button>
             </div>

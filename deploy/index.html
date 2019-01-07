@@ -138,10 +138,10 @@
           <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
             <div class="caption">
               <div class="caption-content">
-                Snake Arcade
+                Privacy Screen
               </div>
             </div>
-            <img src="img/portfolio/PrivacyScreenCrop.png" class="img-responsive" alt="SnakeArcade">
+            <img src="img/portfolio/PrivacyScreenCrop.png" class="img-responsive" alt="PrivacyScreen">
           </a>
         </div>
         <!--
@@ -281,7 +281,7 @@
   </div>
 
   <!-- Project Modals -->
-  <!--Snake Arcade-->
+  <!--Privacy Screen-->
   <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content">
       <div class="close-modal" data-dismiss="modal">
@@ -294,41 +294,15 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <div class="modal-body">
-              <h2>Snake Arcade</h2>
+              <h2>Privacy Screen</h2>
               <hr class="star-primary">
-              <!-- <a href='https://snakearcade-45688.firebaseapp.com/'>
-                <img src="img/portfolio/SnakeArcade.png" class="img-responsive img-centered" alt="">
-              </a> -->
-              <h3>2 player online Snake game</h3>
-              <p>Live Demo -
-                <a href='https://snakearcade-45688.firebaseapp.com/'>https://snakearcade-45688.firebaseapp.com/</a>
+              <h3>Quickly hide your internet session by mousing off the screen.</h3>
+              <p>Chrome Store -
+                <a href='https://chrome.google.com/webstore/detail/privacyscreen/bndclkkabaajpgnfimggpjkjbocchjco/'>https://chrome.google.com/webstore/detail/privacyscreen/bndclkkabaajpgnfimggpjkjbocchjco/</a>
               </p>
               <p>Github -
-                <a href='https://github.com/deltamaze/SnakeArcade'>https://github.com/deltamaze/SnakeArcade</a>
+                <a href='https://github.com/deltamaze/PrivacyScreen'>https://github.com/deltamaze/PrivacyScreen</a>
               </p>
-              <div class='left'>Node server runs the game, and posts the snake positions into a readable firebase structure. Clients are able
-                to send input to firebase, which the node server listens on. The client also listens and draws the snake
-                positions onto a p5.js canvas.
-                </br>
-                </br>
-                Snake game logic was mostly derived from "The Coding Train":
-                <a href='https://youtu.be/AaGK-fj-BAM'>https://youtu.be/AaGK-fj-BAM</a> and just converted into a client/server format, and extended to allow 2
-                players.
-                </br>
-                </br>
-                This was more of a proof of concept to see Firebases and Firebase Function abilities and limitations. Firebase functions
-                proved to not work very well for hosting the server side code. The onWrite database trigger would go into
-                sleep mode and it would take 30+ seconds from the client asking to start the game, for the server to actually
-                do it. Also, there were other performance issues, which caused me to host the server side as a node.js service
-                instead.
-                </br>
-                </br>
-                Firebase itself also probably wasn't optimal for this specific application, as it seems to have 300ms lag spikes from time
-                to times. For this snake game, a 300ms lag spike could cause a snake to crash into the wall. I don't think
-                firebase was intended to be used for this scenario, as this probably should have been a socket.io/signalR
-                project. For most other use cases it should not be an issue, and I still highly recommend firebase as a "Backend
-                as a Service" solution.</div>
-
               <button type="button" class="btn btn-default" data-dismiss="modal">
                 <i class="fa fa-arrow-left"></i> Back</button>
             </div>

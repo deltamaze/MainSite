@@ -417,8 +417,8 @@
   <!-- Theme JavaScript -->
   <script src="js/freelancer.min.js"></script>
   <!-- Bootstrap Table JavaScript -->
-  <script src="https://rawgit.com/wenzhixin/bootstrap-table/master/src/bootstrap-table.js"></script>
-
+  <!-- <script src="https://rawgit.com/wenzhixin/bootstrap-table/master/src/bootstrap-table.js"></script> -->
+  <script src="js/bootstrap-table.min.js"></script> 
   <!--Back back button take user out of modal-->
   <script type="text/javascript">
     $('#portfolioModal1').on('show.bs.modal', function (e) {
@@ -455,13 +455,14 @@
   <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
   <script>
     var config = {
-      apiKey: "AIzaSyBPk-QypKVKaPy7MkKkxKdCVkbgKQcPYWY",
-      authDomain: "wpooley-49105.firebaseapp.com",
-      databaseURL: "https://wpooley-49105.firebaseio.com",
-      projectId: "wpooley-49105",
-      storageBucket: "wpooley-49105.appspot.com",
-      messagingSenderId: "344411469950"
-    };
+  apiKey: 'AIzaSyBPk-QypKVKaPy7MkKkxKdCVkbgKQcPYWY',
+  authDomain: 'wpooley-49105.firebaseapp.com',
+  databaseURL: 'https://wpooley-49105.firebaseio.com',
+  projectId: 'wpooley-49105',
+  storageBucket: 'wpooley-49105.appspot.com',
+  messagingSenderId: '344411469950',
+  appId: '1:344411469950:web:a1e1ecfed6c0199d'
+};
     firebase.initializeApp(config);
     var db = firebase.firestore()
 
@@ -485,8 +486,9 @@
         }
         loopIndex++;
       })
-
+		console.log(tableData);
       $('#tbl').bootstrapTable('load', tableData);
+	  
 
 
     });

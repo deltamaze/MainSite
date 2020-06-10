@@ -2,3 +2,4 @@ node_modules
 .firebaseerc
 firebase.json
 *.firebaserc
+.firebase

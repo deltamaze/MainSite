@@ -1,17 +1,15 @@
 ﻿using System.Collections.Generic;
-public class Portfolio
+public class WilliamPooley : SoftwareDeveloper
 {
-    
-    string name = "William Pooley";
-    string title = "Software Developer";
-
-    string aboutMe =
+    void MyInfo()
+    {
+        AboutMe =
         @"
             Software developer with over 10 years of professional experience.
             On my free time, I play around with emerging web technologies.
         ";
 
-    List<string> skills = new List<string>(){
+        Skills = new List<string>(){
             "TSQL",
             "C#",
             ".NET Framework/Core",
@@ -23,70 +21,73 @@ public class Portfolio
             "JS Libraries/Frameworks: Bootstrap/React/Angular/Firebase",
         };
 
-    FeaturedApps.Push(
+        FeaturedApps.Add(
         new FeaturedApp
         {
-            Preview = "website.url.com",
+            Name = "BlazorTimer",
+            Preview = "website.url.com", //swap with hypertext link
             SourceCode = "github.com/",
-            Description = 
+            Description =
             @"
                 Timer/Stop watch website built with C# Blazor
                 Targetting Web Assembly, to run natively on client computer
             "
         });
 
-    FeaturedApps SimplePlanner =
-        new FeaturedApps
+        FeaturedApps.Add(
+        new FeaturedApp
         {
-            Preview = "planner.wpooley.com", //Display with HTML a tag: "View" with href to actual
+            Name = "ReactPlanner",
+            Preview = "website.url.com",//swap with hypertext link
             SourceCode = "github.com/",
             Description =
             @"
                 Planner/Calendar website built with Redux/React/Firebase.
             "
-        };
+        });
 
-    FeaturedApps PrivacyScreen =
-        new FeaturedApps
+        FeaturedApps.Add(
+        new FeaturedApp
         {
-            Preview = "planner.wpooley.com",
+            Name = "Privacy Screen",
+            Preview = "website.url.com",//swap with hypertext link
             SourceCode = "github.com/",
             Description =
             @"
-                Planner/Calendar website built with Redux/React/Firebase.
+                Chrome Extension, only displays browser content while mouse is
+                hovering viewport. Applies a blank screen when mouse is no
+                longer hovering over viewport.
             "
+        });
+
+        AroundTheWeb = new Dictionary<string, string>()
+        {
+            { "LinkedIn","github.com" },
+            { "Github","github.com" },
+            { "Github","github.com" }
         };
 
-    
-
-    ///////////////////////////////////////////////////////////////////////////
-    ///                          Other Coding Projects                      ///
-    ///
-    /// Project Name:
-    /// Project Type:
-    /// Description:
-    /// Github:
-    /// 
-    /// Project Name:
-    /// Project Type:
-    /// Description:
-    /// Github:
-    /// 
-    /// Project Name:
-    /// Project Type:
-    /// Description:
-    /// Github:
+    }
 }
+
+
+
+
 
 
 public class FeaturedApp
 {
+    public string Name { get; set; }
     public string Preview { get; set; }
-    public string SourceCode{ get; set; }
+    public string SourceCode { get; set; }
     public string Description { get; set; }
 }
-public class Portfolio
+public class SoftwareDeveloper
 {
-    public List<FeaturedApp> FeaturedApps { get; set; }
+    public List<FeaturedApp> FeaturedApps = new List<FeaturedApp>();
+    public string AboutMe { get; set; }
+
+    public List<string> Skills { get; set; }
+    public Dictionary<string, string> AroundTheWeb = new Dictionary<string, string>();
 
 }

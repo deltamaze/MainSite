@@ -22,42 +22,42 @@ public class WilliamPooley : SoftwareDeveloper
         };
 
         FeaturedApps = new List<FeaturedApp>() {
-        new FeaturedApp()
-        {
-            Name = "BlazorTimer",
-            Preview = "website.url.com", //swap with hypertext link
-            SourceCode = "github.com/",
-            Description =
-            @"
-                Timer/Stop watch website built with C# Blazor
-                Targetting Web Assembly, to run natively on client computer
-            "
-        },
+            new FeaturedApp()
+            {
+                Name = "BlazorTimer",
+                Preview = "website.url.com", //swap with hypertext link
+                SourceCode = "github.com/",
+                Description =
+                @"
+                    Timer/Stop watch website built with C# Blazor
+                    Targetting Web Assembly, to run natively on client computer
+                "
+            },
 
-        new FeaturedApp()
-        {
-            Name = "ReactPlanner",
-            Preview = "website.url.com",//swap with hypertext link
-            SourceCode = "github.com/",
-            Description =
-            @"
-                Persistent Planner/Calendar website built with Redux/React/Firebase.
-            "
-        },
+            new FeaturedApp()
+            {
+                Name = "ReactPlanner",
+                Preview = "website.url.com",//swap with hypertext link
+                SourceCode = "github.com/",
+                Description =
+                @"
+                    Persistent Planner/Calendar website built with Redux/React/Firebase.
+                "
+            },
 
-        new FeaturedApp()
-        {
-            Name = "Privacy Screen",
-            Preview = "website.url.com",//swap with hypertext link
-            SourceCode = "github.com/",
-            Description =
-            @"
-                Chrome Extension, only displays browser content while mouse is
-                hovering viewport. Applies a blank screen when mouse is no
-                longer hovering over viewport.
-            "
-        }
-    };
+            new FeaturedApp()
+            {
+                Name = "Privacy Screen",
+                Preview = "website.url.com",//swap with hypertext link
+                SourceCode = "github.com/",
+                Description =
+                @"
+                    Chrome Extension, only displays browser content while mouse is
+                    hovering viewport. Applies a blank screen when mouse is no
+                    longer hovering over viewport.
+                "
+            }
+        };
 
         AroundTheWeb = new Dictionary<string, string>()
         {

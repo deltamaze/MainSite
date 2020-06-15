@@ -3,7 +3,7 @@ body {
     color: rgb(220, 220,220);
     background-color: #2d2d30;
     font-size: 0.625rem;
-    white-space:nowrap;
+    white-space: nowrap;
 }
 
 .tab-and-code-container {
@@ -28,7 +28,7 @@ body {
 }
 
 .breakpoint-line-code-container {
-    height: 80%;
+    height: 90%;
 }
 
 .breakpoint-bar {
@@ -46,10 +46,11 @@ body {
 .line-code-container {
     height: 100%;
     overflow-y: scroll;
+    overflow-x: scroll;
     line-height: 1.5;
     font-size: 0.75rem;
     background-color: rgb(38,38,38);
-    position:relative;
+    position: relative;
 }
 
 .line-number-bar {
@@ -67,7 +68,7 @@ body {
     margin-left: 4.5rem;
     float: left;
     position: absolute;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .no-issues-found-footer {
@@ -111,6 +112,77 @@ body {
 .tab-level-4 {
     margin-left: 9.5rem;
 }
-.large-text{
-    font-size:x-large;
+
+.tab-level-5 {
+    margin-left: 11.875rem;
 }
+
+.large-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.kinda-large-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+/*Scrollbar Start*/
+
+::-webkit-scrollbar-button:horizontal:increment {
+    height: 0.9375rem;
+    width: 0.9375rem;
+    border-top: 0.4685rem solid transparent;
+    border-bottom: 0.4685rem solid transparent;
+    border-left: 0.4685rem solid rgb(75,156,214);
+    background: rgb(62,62,66)
+}
+
+::-webkit-scrollbar-button:horizontal:decrement {
+    height: 0.9375rem;
+    border-top: 0.4685rem solid transparent;
+    border-bottom: 0.4685rem solid transparent;
+    border-right: 0.4685rem solid rgb(75,156,214);
+    background: rgb(62,62,66)
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    width: 0.9375rem;
+    border-left: 0.4685rem solid transparent;
+    border-right: 0.4685rem solid transparent;
+    border-top: 0.4685rem solid rgb(75,156,214);
+    background: rgb(62,62,66)
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+    width: 0.9375rem;
+    border-left: 0.4685rem solid transparent;
+    border-right: 0.4685rem solid transparent;
+    border-bottom: 0.4685rem solid rgb(75,156,214);
+    background: rgb(62,62,66)
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.9375rem;
+    height: 0.9375rem;
+    -webkit-appearance: none;
+}
+::-webkit-scrollbar-corner {
+    background: rgb(62,62,66);
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(62,62,66)
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(104,104,104);
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(158,158,158);
+    }
+/*Scrollbar End*/

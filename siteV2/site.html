@@ -19,7 +19,7 @@
                     </div>
                     <div class="code-container">
                         <span class="code-text-blue">using</span> System.Collections.Generic;<br /><br />
-                        <span class="code-text-blue">public class </span><span class="code-text-teal">WilliamPooley</span> : <span class="code-text-teal">SoftwareDeveloper</span><br />
+                        <span class="code-text-blue">public class </span><span class="code-text-teal large-text">WilliamPooley</span> : <span class="code-text-teal large-text">SoftwareDeveloper</span><br />
                         {<br />
                         <span class="tab-level-1">
                             <span class="code-text-blue">void</span>
@@ -31,7 +31,7 @@
                         </span><br />
 
                         <span class="tab-level-2">
-                            AboutMe =
+                            <span class="large-text">AboutMe</span> =
                         </span><br />
                         <span class="tab-level-2 code-text-orange">
                             @"
@@ -47,7 +47,7 @@
                             ;
                         </span><br /><br />
                         <span class="tab-level-2">
-                            Skills =
+                            <span class="large-text">Skills</span> =
                             <span class="code-text-blue">new</span>
                             <span class="code-text-teal">List</span>&lt;<span class="code-text-blue">string</span>&gt;(){
                         </span><br />
@@ -98,7 +98,8 @@
                         </span><br />
                         <span class="tab-level-3">
                             <span class="code-text-orange">"</span>
-                        </span><br /><br />
+                        </span><br />
+                        <span class="tab-level-2">}</span><br /><br />
                         <!-- React Planner -->
                         <span class="tab-level-2">FeaturesApps.<span class="code-text-yellow">Add</span>(</span><br />
                         <span class="tab-level-2"><span class="code-text-blue">new</span> <span class="code-text-teal">FeaturedApp</span></span><br />
@@ -115,74 +116,61 @@
                         </span><br />
                         <span class="tab-level-3">
                             <span class="code-text-orange">"</span>
-                        </span><br /><br />
-                        <!--
-                        "C#",
-                        ".NET Framework/Core",
-                        "IIS",
-                        "Sql Server Administration Tasks",
-                        "SSRS (Report Development)",
-                        "SSIS (ETL Services)",
-                        "HTML 5/CSS",
-                        "JS Libraries/Frameworks: Bootstrap/React/Angular/Firebase",
-                        };
+                        </span><br />
+                        <span class="tab-level-2">}</span><br /><br />
+                        <!-- Privacy Screen -->
+                        <span class="tab-level-2">FeaturesApps.<span class="code-text-yellow">Add</span>(</span><br />
+                        <span class="tab-level-2"><span class="code-text-blue">new</span> <span class="code-text-teal">FeaturedApp</span></span><br />
+                        <span class="tab-level-2">{</span><br />
+                        <span class="tab-level-3">Name = <span class="code-text-orange">"Privacy Screen"</span></span><br />
+                        <span class="tab-level-3">Preview = <span class="code-text-orange">"website.url.com"</span></span><br />
+                        <span class="tab-level-3">SourceCode = <span class="code-text-orange">"website.url.com"</span></span><br />
+                        <span class="tab-level-3">Description = </span><br />
+                        <span class="tab-level-3 code-text-orange">
+                            @"
+                        </span><br />
+                        <span class="tab-level-4 code-text-orange">
+                            Chrome Extension, only displays brwoser content while mouse is
+                        </span><br />
+                        <span class="tab-level-4 code-text-orange">
+                            hovering viewport. Applies a blank screen when mouse is no
+                        </span><br />
+                        <span class="tab-level-4 code-text-orange">
+                            longer hovering over viewport.
+                        </span><br />
+                        <span class="tab-level-3">
+                            <span class="code-text-orange">"</span>
+                        </span><br />
+                        <span class="tab-level-2">}</span><br /><br />
+                        <!-- Around the web -->
+                        <span class="tab-level-2">
+                            <span class="large-text">AroundTheWeb</span> =
+                            <span class="code-text-blue">new</span>
+                            <span class="code-text-teal">Dictionary</span><<span class="code-text-blue">string</span>,
+                            <span class="code-text-blue">string</span>>()
+                        </span><br />
+                        <span class="tab-level-2">{</span><br />
+                        <span class=" tab-level-3">
+                            { <span class="code-text-orange">"LinkedIn"</span>,
+                            <span class="code-text-orange">"website.com"</span> },
+                        </span><br />
+                        <span class=" tab-level-3">
+                            { <span class="code-text-orange">"LinkedIn"</span>,
+                            <span class="code-text-orange">"website.com"</span> },
+                        </span><br />
+                        <span class=" tab-level-3">
+                            { <span class="code-text-orange">"LinkedIn"</span>,
+                            <span class="code-text-orange">"website.com"</span> }
+                        </span><br />
+                        <span class="tab-level-2">};</span><br />
+                        <span class="tab-level-1">}</span><br />
+                        <span class="">}</span><br />
 
-                        FeaturedApps.Add(
-                        new FeaturedApp
-                        {
-                        Name = "BlazorTimer",
-                        Preview = "website.url.com", //swap with hypertext link
-                        SourceCode = "github.com/",
-                        Description =
-                        @"
-                        Timer/Stop watch website built with C# Blazor
-                        Targetting Web Assembly, to run natively on client computer
-                        "
-                        });
-
-                        FeaturedApps.Add(
-                        new FeaturedApp
-                        {
-                        Name = "ReactPlanner",
-                        Preview = "website.url.com",//swap with hypertext link
-                        SourceCode = "github.com/",
-                        Description =
-                        @"
-                        Planner/Calendar website built with Redux/React/Firebase.
-                        "
-                        });
-
-                        FeaturedApps.Add(
-                        new FeaturedApp
-                        {
-                        Name = "Privacy Screen",
-                        Preview = "website.url.com",//swap with hypertext link
-                        SourceCode = "github.com/",
-                        Description =
-                        @"
-                        Chrome Extension, only displays browser content while mouse is
-                        hovering viewport. Applies a blank screen when mouse is no
-                        longer hovering over viewport.
-                        "
-                        });
-
-                        AroundTheWeb = new Dictionary<string, string>
-                            ()
-                            {
-                            { "LinkedIn","github.com" },
-                            { "Github","github.com" },
-                            { "Github","github.com" }
-                            };
-
-                            }
-                            }-->
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    </div> <!--end code container-->
+                </div> <!--line-code-container-->
+            </div><!--breakpoint-line-code-container-->
+        </div><!--tab-and-code-container-->
+    </div><!--parent-container-->
     <script>
         const onLoadFunction = function () {
             const lineNumberElement = document.getElementsByClassName("line-numbers")[0];

@@ -21,8 +21,8 @@ public class WilliamPooley : SoftwareDeveloper
             "JS Libraries/Frameworks: Bootstrap/React/Angular/Firebase",
         };
 
-        FeaturedApps.Add(
-        new FeaturedApp
+        FeaturedApps = new List<FeaturedApp>() {
+        new FeaturedApp()
         {
             Name = "BlazorTimer",
             Preview = "website.url.com", //swap with hypertext link
@@ -32,10 +32,9 @@ public class WilliamPooley : SoftwareDeveloper
                 Timer/Stop watch website built with C# Blazor
                 Targetting Web Assembly, to run natively on client computer
             "
-        });
+        },
 
-        FeaturedApps.Add(
-        new FeaturedApp
+        new FeaturedApp()
         {
             Name = "ReactPlanner",
             Preview = "website.url.com",//swap with hypertext link
@@ -44,10 +43,9 @@ public class WilliamPooley : SoftwareDeveloper
             @"
                 Persistent Planner/Calendar website built with Redux/React/Firebase.
             "
-        });
+        },
 
-        FeaturedApps.Add(
-        new FeaturedApp
+        new FeaturedApp()
         {
             Name = "Privacy Screen",
             Preview = "website.url.com",//swap with hypertext link
@@ -58,7 +56,8 @@ public class WilliamPooley : SoftwareDeveloper
                 hovering viewport. Applies a blank screen when mouse is no
                 longer hovering over viewport.
             "
-        });
+        }
+    };
 
         AroundTheWeb = new Dictionary<string, string>()
         {
@@ -66,7 +65,6 @@ public class WilliamPooley : SoftwareDeveloper
             { "Github","github.com" },
             { "Github","github.com" }
         };
-
     }
 }
 

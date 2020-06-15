@@ -42,7 +42,7 @@ public class WilliamPooley : SoftwareDeveloper
             SourceCode = "github.com/",
             Description =
             @"
-                Planner/Calendar website built with Redux/React/Firebase.
+                Persistent Planner/Calendar website built with Redux/React/Firebase.
             "
         });
 
